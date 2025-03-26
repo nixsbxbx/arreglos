@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Arreglos {
     
+public static int T = 25;//tamaño maximo del grupo(variable global)
+
     public static void leerCalificaciones(){
 
     }
@@ -11,6 +13,10 @@ public class Arreglos {
     }
     
     public static void main(String[] args) {
+        double[] parcial1, parcial2, parcial3,parcial4;
+        double[] promInd;
+        boolean[] aprobados;
+        
         double[] calificaciones = new double[5];
         Scanner sc= new Scanner(System.in);
         for (int i=0; i<calificaciones.length; i++){
