@@ -44,8 +44,15 @@ public static int t = 25;//tamaño maximo del grupo(variable global)
         }
     }
     
+    public static double calcularPromedioGrupo(double [] proms){
+        double suma = 0;
+        for (int i = 0; i < proms.length; i++)
+        suma += proms[i];//sumando promedios
+        return suma / proms.length;//regresando el promedio
+    }
+
     public static void main(String[] args) {
-        double[] parcial1, parcial2, parcial3,parcial4;
+        double[] parcial1, parcial2, parcial3,parcial4;//solo se declaran los arreglos
         double[] promInd;
         boolean[] aprobados;
         Scanner sc= new Scanner(System.in);
@@ -98,7 +105,10 @@ public static int t = 25;//tamaño maximo del grupo(variable global)
             System.out.println("--------------------------------------------");
             System.out.println("Promedios individuales");
             imprimirCalificaciones(promInd);
+            System.out.println("Estudiantes aprobados");
             imprimirResultados(aprobados);
+            System.out.println("--------------------------------------------");
+            System.out.println("El promedio del grupo es: " + calcularPromedioGrupo(promInd));
         
         sc.close();
     }
